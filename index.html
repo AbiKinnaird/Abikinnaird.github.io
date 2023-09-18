@@ -1,122 +1,131 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Abi Kinnaird</title>
-</head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
-    
-    .centered-container {
-        text-align: center;
-    }
-
-    
-    h1 {
-        margin-bottom: 10px; 
-        color: #ae93c4;
-        font-family: Palatino;
-        font-size: 300%;
-    }
-
-    
-    h2 {
-        margin-top: 10px; 
-        color: #ae93c4;
-        font-family: Palatino;
-        font-size: 100%;
-    }
-
-    h3 {
-        margin-top: 10px; 
-        color: #9AB2D4;
-        font-family: Palatino;
-        font-size: 130%;
-    }
-
-    .container {
-    display: flex;
-    height: 100%;
-    }
-
-    .mainbody {
-    width: 90%;
-    text-align: center;
-    margin:  5%;
-    }
-
-    .section {
-        flex: 1;
-        text-align: center;
-    }
-    .container2 {
-    width: 80%;
-
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 20px; /* Add padding to the container if needed */
-}
-
-.hidden {
-    display: none;
-}
-
-.toggle-container {
-    text-align: center;
-    margin: 20px;
-}
-
-button {
-    padding: 3px 40px;
-    font-size: 20px;
-    cursor: pointer;
-    border: None ;
-    background-color: #f7f2e9;
-    color:#9AB2D4;
-
-}
-
-.box {
-    position: relative;
-    background-color: #c5d1e1;
-    padding-top: 15px;
-}
-
-h4{
-    font-size: 15px;
-    font-family: Palatino;
-    
-}
-.date {
-        position: absolute;
-        top: 10px; /* Adjust the top value to control vertical positioning */
-        left: 10px; /* Adjust the right value to control horizontal positioning */
-        font-size: 14px;
-        font-family: Palatino;
-        color: #333; /* Color of the date text */
-}
-
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
-<body style="background-color:#f7f2e9;">
-    <div class="centered-container">
-        <h1>Abi Kinnaird</h1>
-                
-        <h2> I am a Data Scientist with a passion for Machine Learning and Data Visualisation</h2>
+</head>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>Abi Kinnaird</b></h1>
+  <p>Data Scientist | Machine Learning | Data Visualisation</p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    
+    <div class="w3-container">
+      <h3><b>Visualisation of Credit Card Fraud Detection</b></h3>
+      <h5> <span class="w3-opacity">September, 2023</span></h5>
     </div>
-    <hr width="95%;"  color="#ae93c4"  size="2" >
-    <div class = "mainbody">
-    <h3> Recent Projects </h2>
-        <div class="box">
-            <div class="date">
-                September 2023 
-            </div>
-            <h4>
-                Visualisation of Credit Card Fraud Detection 
-            </h4>
-            <img src="https://Abikinnaird.github.io/Dashboard.png" alt="Dashboard" width=95% height=50% >
+    
+    <div class="w3-container">
+      <p>This project involved the construction of an interactive Python coded dashboard. 
+        This dashboard is used to visual and understand a Random Forest model which is trained to detect fraud. 
+        
+        </p>
+        <img src="https://Abikinnaird.github.io/Dashboard.png" alt="Dashboard alt="Nature" style="width:100%">
+        <p></p>
+        The four sections of the dashboard are as follows:
+        <ul>
+            <li>Parallel Coordinate Plot</li>
+            <li>Decision Tree View</li>
+            <li>Scatter plot</li>
+            <li>Whole Forest View</li>
+          </ul>
+      </p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Video Demonstration >></b></button></p>
         </div>
         
+      </div>
     </div>
+  </div>
+  <hr>
 
-        
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    
+    <div class="w3-container">
+      <h3><b>Prediction of Functionality of Water pumps</b></h3>
+      <h5> <span class="w3-opacity">May, 2022</span></h5>
     </div>
+    <img src="https://Abikinnaird.github.io/Map.png" alt="Dashboard alt="Nature style="width:100%" >
+    <div class="w3-container">
+      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
+        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <div class="w3-container w3-white">
+      <h4><b>About me</b></h4>
+      <p>I am Data Scientist graduate from the University of Nottingham. I have a particular interest in Machine Learning and Data Visualisation.</p>
+    </div>
+  </div><hr>
+  
+  
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Technical Skills</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Python</span> 
+        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SQL</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">HTML</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">CSS</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">R Studio</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Databases</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Bayesian Statistics</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Time Series</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Machine Learning</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Excel</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Plotly</span> 
+    </p>
+    </div>
+  </div>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+
+
 </body>
 </html>
-
