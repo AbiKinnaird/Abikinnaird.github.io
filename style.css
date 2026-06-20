@@ -1,14 +1,194 @@
-.centre-heading{
-    text-align: center;
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #1a1a1a;
+  --muted: #777;
+  --line: #e6e6e6;
+  --accent: #64A6BD;
+  --accent2: #ADA7C9;
+  --bg: #fbfbfa;
 }
 
-.w3-tag{
-    padding: 10px;
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
 }
 
-summary{
-    font-size: large;
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 8rem;
 }
 
+/* ── Header ── */
+.head h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
 
+.role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--accent2);
+  margin-top: 0.15rem;
+}
 
+.links {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.links a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ── Intro ── */
+.intro {
+  margin-top: 2rem;
+  font-size: 1.05rem;
+  color: #333;
+  max-width: 52ch;
+}
+
+/* ── Section label ── */
+.label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent2);
+  margin: 3.5rem 0 0.5rem;
+}
+
+section { margin: 0; }
+
+/* ── Expandable items ── */
+.item {
+  border-top: 1px solid var(--line);
+}
+
+section .item:last-of-type {
+  border-bottom: 1px solid var(--line);
+}
+
+.item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.95rem 0;
+  transition: color 0.15s;
+}
+
+.item summary::-webkit-details-marker { display: none; }
+
+.item summary::before {
+  content: "+";
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+  font-size: 1rem;
+  width: 1rem;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.item[open] summary::before { content: "–"; }
+
+.item-title {
+  flex: 1;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.item summary:hover .item-title { color: var(--accent); }
+
+.item-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.item-body {
+  padding: 0 0 1.4rem 1rem;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.item-body ul { padding-left: 1.1rem; }
+.item-body li { margin-bottom: 0.4rem; }
+
+.item-body p { margin-bottom: 0.9rem; }
+
+.item-body img {
+  width: 100%;
+  border: 1px solid var(--line);
+  display: block;
+  margin-bottom: 0.9rem;
+}
+
+.tags {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+  transition: color 0.15s;
+}
+
+.btn:hover { color: var(--accent); }
+
+/* ── Skills / Education lists ── */
+.skills {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 0.5rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.skills dt {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding-top: 1px;
+}
+
+.skills dd {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .wrap { padding: 3.5rem 1.25rem 5rem; }
+  .skills { grid-template-columns: 4rem 1fr; }
+}
